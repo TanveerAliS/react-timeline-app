@@ -1,0 +1,6 @@
+@import './variables.scss';
+
+.App{
+  @import '../container/Header/Header.scss';
+  @import '../container/TimeLine/TimeLine.scss';
+}

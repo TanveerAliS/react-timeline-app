@@ -1,0 +1,161 @@
+.timeLine {
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 4rem;
+  bottom: 0;
+  margin: auto;
+  padding-left: 30px;
+  background-color: $gray;
+  font-size: 10pt;
+
+  h2{
+    text-align: center;
+  }
+  
+  ul {
+    list-style: none;
+    width: 3px;
+    padding: 0;
+    margin-top: -20px;
+    
+    .destination {
+      .segments{
+        .content {
+          box-shadow: none;
+          background-color: white;
+          color: black;
+          justify-content: center;
+          padding: 15px;
+          margin: 0;
+          .src-dest{
+            font-size: 20px;
+          }
+        }       
+        .details{
+          padding: 5px 15px;
+          box-shadow: 0 2px 4px 0px rgba(0, 0, 0, 0.3);
+        }
+      }
+    }
+    :first-child{
+       &::after {
+         background: $dark-green;
+       }
+    }
+    li {
+      position: relative;
+      margin-left: -1px;
+      
+        &::before {
+          position: absolute;
+          content: '';
+          width: 22px;
+          height: 22px;
+          background: $dark-green;
+          border-radius: 100%;
+          top: 0;
+          left: -8px;
+          z-index: 10;
+        }
+        &::after {
+           content: '';
+           position: absolute;
+           width: 14px;
+           height: 14px;
+           background: white;
+           border-radius: 100%;
+           top: 4px;
+           left: -4.5px;
+           z-index: 11;
+        }
+      }
+
+      .segments {
+        width: 80vw;;
+        margin-left: 25px;
+        margin-top: 40px;
+        
+        &::after {
+          content: '';
+          position: absolute;
+          width: 1px;
+          height: 6rem;
+          background: #27ae60;
+          border: 1px solid #27ae60;
+          top: 26px;
+          left: 1.2px;
+        }
+        .time{
+          font-size: 16pt;          
+        }
+        .wrapper{
+          margin-top: 5px;
+              border: 1px solid $blue;
+        }
+
+        .details {
+          min-height: 20px;
+          padding: 5px;
+          color: white;
+          background: $blue;
+          display: flex;
+          justify-content: space-between;
+          line-height: 20px;
+        }
+        
+        span {
+          &.status {
+            color: $green;
+          border: 1px solid;
+            padding: 0 5px;
+            line-height: 17px;          }
+          &.boarding, &.seat, &.time {
+             float: right;
+          }
+        }
+
+        .content {
+          padding: 5px;
+          position: relative;
+          margin-top: 15px;
+          box-shadow: 0 2px 4px 0px rgba(0,0,0,.3); 
+          display: flex;
+          line-height: 20px;
+          background-color: $blue;
+          color: white;
+          .icon {
+            padding: 0 10px;
+          }
+          
+          .status{
+            padding: 0 10px;
+            align-self: flex-end;
+            position: relative;
+            
+            .time{
+              color: $orange;  
+              font-size: 10pt;
+
+              &::before {
+                width: 6px;
+                height: 6px;
+                content: '';
+                position: absolute;
+                background-color: white;
+                border-radius: 50%;
+                top: 7px;
+                left: 0px;
+              }
+
+            }
+          }
+          
+          .desc {
+            flex:2;
+          }
+        }
+    }
+  }
+}

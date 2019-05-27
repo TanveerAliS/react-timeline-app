@@ -1,0 +1,16 @@
+.Header{
+    background-color: $dark-blue;
+    color: white;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+
+    h2{
+        margin: 0;
+        padding: 0;
+    }
+    .fas{
+        margin: 20px;
+    }
+}
